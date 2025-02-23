@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIPKUMDA - Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <style>
+      .hero-section {
+        position: relative;
+        background: url("sulangking.jpg") no-repeat center center/cover;
+        height: 100vh;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 10;
+        color: white;
+        text-align: center;
+      }
+      .hero-buttons .btn {
+        transition: transform 0.2s ease-in-out, opacity 0.2s;
+      }
+      .hero-buttons .btn:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+      .hero-logo {
+        animation: bounce 2s infinite;
+        -webkit-text-stroke: 3px white;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .login-box {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .login-box.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="hero-section d-flex align-items-center justify-content-center">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <img
+          src="sipkumda.jpg"
+          alt="SIPKUMDA Logo"
+          class="mb-3 hero-logo"
+          width="150" />
+        <h1 class="fw-bold">Selamat Datang di SIPKUMDA</h1>
+        <p class="lead">Sistem Informasi Pembentukan Produk Hukum Daerah</p>
+        <div class="hero-buttons mt-4">
+          <button onclick="scrollToLogin()" class="btn btn-primary px-4 py-2">
+            Login
+          </button>
+          <button onclick="scrollToAbout()" class="btn btn-warning px-4 py-2">
+            Tentang
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="py-5 bg-white text-center">
+      <h2 class="fw-bold text-dark">Tentang SIPKUMDA</h2>
+      <p class="mt-3 text-muted w-75 mx-auto">
+        SIPKUMDA (Sistem Informasi Pembentukan Produk Hukum Daerah) adalah
+        sebuah platform digital yang dirancang untuk meningkatkan efisiensi
+        dalam penyusunan, pengajuan, revisi, dan fasilitasi produk hukum daerah.
+        Dengan sistem ini, setiap perangkat daerah dapat mengajukan rancangan
+        peraturan dengan lebih cepat, akurat, dan transparan.
+      </p>
+      <p class="mt-3 text-muted w-75 mx-auto">
+        SIPKUMDA memungkinkan admin dan verifikator untuk melakukan evaluasi
+        kelengkapan dokumen secara sistematis. Proses revisi dilakukan dengan
+        lebih terstruktur, melibatkan peneliti yang ditunjuk untuk memberikan
+        masukan serta perbaikan atas rancangan yang diajukan. Setelah semua
+        proses selesai, sistem ini juga membantu dalam penerbitan nota dinas
+        sebagai bentuk persetujuan akhir.
+      </p>
+      <p class="mt-3 text-muted w-75 mx-auto">
+        Dengan antarmuka yang ramah pengguna, fitur otomatisasi status dokumen,
+        serta integrasi dengan standar hukum daerah, SIPKUMDA menjadi solusi
+        terbaik untuk memastikan bahwa setiap produk hukum yang disusun memenuhi
+        standar yang berlaku dan dapat dipantau secara real-time oleh semua
+        pihak yang berkepentingan.
+      </p>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <!-- Login Form -->
+        <div class="col-lg-6">
+          <div class="card shadow">
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center mb-4">
+                <h1 class="text-primary">Sign In</h1>
+                <p class="text-muted">
+                  Enter your email and password to sign in
+                </p>
+              </div>
+              <form role="form">
+                <div class="form-group mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password" />
+                </div>
+                <div class="custom-control custom-checkbox mb-3">
+                  <input
+                    class="custom-control-input"
+                    id="customCheck1"
+                    type="checkbox" />
+                  <label class="custom-control-label" for="customCheck1">
+                    Remember me
+                  </label>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary btn-block">
+                    Sign in
+                  </button>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="#" class="text-primary">
+                    Don't have an account? Sign up
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Right Side Text and Image -->
+        <div class="col-lg-6 d-flex align-items-center custom-bg">
+          <div class="w-100 text-center px-4">
+            <img
+              src="/assets/img/barabai.png"
+              alt="Login illustration"
+              class="img-fluid rounded" />
+            <h3 class="mt-4 login-side-text">
+              "Attention is the new currency"
+            </h3>
+            <p class="text-muted">
+              The more effortless the writing looks, the more effort the writer
+              actually put into the process.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function scrollToLogin() {
+        document.getElementById("login").scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          document.querySelector(".login-box").classList.add("visible");
+        }, 500);
+      }
+      function scrollToAbout() {
+        document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
